@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+:root {
+	--color-green: #72db73;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainBody {
+	background-color: #030303;
+	height: 100vh;
+	overflow: hidden;
+}
+.registerPage {
+	display: flex;
+}
+.registerImg {
+	display: flex;
+	height: 100vh;
+	background: url(./Images/registerImage.png) no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 50vw;
+}
+.registerFormSection {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	width: 50vw;
+	flex-direction: column;
+}
+.registerFormSection h2 {
+	font-family: "Single Day", cursive;
+	color: var(--color-green);
+	font-size: 40px;
+}
+.registerFormSection p {
+	margin: 10px 0 40px;
+}
+.registerForm {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+.registerForm input {
+	background-color: #292929;
+	width: 500px;
+	height: 55px;
+	border-radius: 4px;
+	outline: none;
+	border: none;
+	padding: 20px;
+	color: #fff;
+	margin: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.registerForm input[type="checkbox"] {
+	width: 15px;
+	height: 15px;
+}
+.registerForm label {
+	margin: 0 10px;
+	color: #7c7c7c;
+}
+.checkRegister {
+	display: flex;
+	align-items: center;
+}
+.registerFormSection input[type="submit"] {
+	height: 40px;
+	background-color: #72db73;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 0;
+	border-radius: 29px;
+	cursor: pointer;
+	margin-top: 40px;
+}
+.registerForm p {
+	width: 100%;
+	font-size: 13px;
+	color: #7c7c7c;
+	margin: 10px 0;
+}
+.registerForm p span {
+	color: #72db73;
+	cursor: pointer;
+}
+.error {
+	color: #ff0000;
+	font-size: 13px;
+}
+input.inputError {
+	border: 1px solid #ff0000;
 }
 
-.App-link {
-  color: #61dafb;
+/* Entertainment */
+
+.entertainmentPage {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	color: #fff;
+}
+.entertainmentText,
+.entertainmentCategory {
+	width: 50vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.entertainmentText {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.entertainmentText h2 {
+	font-family: "Single Day", cursive;
+	color: var(--color-green);
+	font-size: 48px;
 }
