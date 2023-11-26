@@ -8,7 +8,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Entertainment from './components/Entertainment';
+import Entertainment from './pages/Entertainment';
 
 
 const router = createBrowserRouter([

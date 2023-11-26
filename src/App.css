@@ -116,9 +116,65 @@ input.inputError {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+  flex-direction: column;
+  width: 50vw;
 }
 .entertainmentText h2 {
 	font-family: "Single Day", cursive;
 	color: var(--color-green);
-	font-size: 48px;
+	font-size: 6vh;
+  margin-bottom: 6vh;  
+}
+.entertainmentText p {
+  font-size: 8vh;
+  font-weight: 900;
+}
+
+.entertainmentTags{
+  display: flex;
+  margin: 3vh 0;
+}
+.entertainmentTags .entertainmentTag{
+  background-color: #148a08;
+  padding: 1vh 2vh;
+  border-radius: 40px;
+  margin-right: 1vh;
+  font-size: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.entertainmentTag i{
+  cursor: pointer;
+  margin-left: 2vh;
+}
+.entertainmentCategory{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.category{
+  background-color: #fff;
+  width: 11vw;
+  height: 22vh;
+  margin: 3vh;
+  border-radius: 1vh;
+  /* border: 6px solid var(--color-green); */
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 1vh 2vh;
+}
+
+.categoryTitle{
+  font-size: 3vh;
+} 
+.categoryImg{
+  width: 100%;
+  height: 12vh;
+  /* background-color: gray; */
+  border-radius: 1vh;
 }
