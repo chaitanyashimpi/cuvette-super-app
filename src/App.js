@@ -83,7 +83,7 @@ function App() {
 								Share my registration data with Superapp
 							</label>
 						</div>
-            <span className="error">Field is required</span>  
+            {/* <span className="error">Field is required</span>   */}
 						<input type="submit" value="SIGN UP" />
 						<p>
 							By clicking on Sign up. you agree to Superapp{" "}
