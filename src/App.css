@@ -118,7 +118,6 @@ input.inputError {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 50vw;
 }
 .entertainmentText h2 {
 	font-family: "Single Day", cursive;
@@ -133,6 +132,7 @@ input.inputError {
 
 .entertainmentTags {
 	display: flex;
+	flex-wrap: wrap;
 	margin: 3vh 0;
 }
 .entertainmentTags .entertainmentTag {
@@ -140,6 +140,7 @@ input.inputError {
 	padding: 1vh 2vh;
 	border-radius: 40px;
 	margin-right: 1vh;
+	margin-bottom: 15px;
 	font-size: 2vh;
 	display: flex;
 	align-items: center;
@@ -182,20 +183,37 @@ input.inputError {
 
 
 @media only screen and (width < 1200px){
-	.registerFormSection{
+	.entertainmentText,.entertainmentCategory,.registerFormSection{
 		width: 100vw;
 		margin-top: 30px;
 	}
 	.mainBody{
-		overflow: auto;
+		overflow: scroll;
+		height: max-content;
 	}
-	.registerPage{
+	.registerPage, .entertainmentPage{
 		flex-direction: column;
 	}
 	.registerImg{
 		height: 20vh;
 		width: 100vw;
 	}
+	.entertainmentText h2 {
+		font-size: 3vh;
+		text-align: center;
+	}
+	.entertainmentText p{
+		font-size: 4vh;
+		text-align: center;
+	}
+	.entertainmentTags{
+		align-items: center;
+		justify-content: center;
+	}
+	.category{
+		width: 200px;
+	}
+
 }
 @media only screen and (width < 700px){
 	
