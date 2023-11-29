@@ -227,3 +227,11 @@ input.inputError {
 		width: 100%;
 	}
 }
+
+@media only screen and (width < 515px){
+	.category{
+		width: 140px;
+		height: 140px;
+		margin: 20px;
+	}
+}
