@@ -2,6 +2,31 @@
 	--color-green: #72db73;
 }
 
+.notes::-webkit-scrollbar {
+	width: 12px;
+	border-radius: 17px;
+	background: #ffe6a6;
+}
+
+.notes::-webkit-scrollbar-track {
+	/* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+	border-radius: 17px;
+	background: #524a032d;
+	width: 12px;
+}
+
+.notes::-webkit-scrollbar-thumb {
+	width: 12px;
+	border-radius: 17px;
+	background: #ffe6a6;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 .mainBody {
 	background-color: #030303;
 	height: 100vh;
@@ -155,6 +180,7 @@ input.inputError {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
+	height: 70%;
 }
 .category {
 	background-color: #fff;
@@ -181,47 +207,200 @@ input.inputError {
 	border-radius: 1vh;
 }
 
+.entertainmentNext {
+	background-color: #148a08;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	padding: 10px 20px;
+	border-radius: 40px;
+	cursor: pointer;
+}
 
-@media only screen and (width < 1200px){
-	.entertainmentText,.entertainmentCategory,.registerFormSection{
+.dashboard {
+	color: white;
+	padding: 4rem;
+	display: flex;
+}
+.dashboardLeft {
+	flex-basis: 2;
+}
+.dashboardRight {
+	flex-basis: 1;
+	background-color: #fff;
+}
+.dashboardProfile,
+.dashboardTemp,
+.dashboardNotes,
+.dashboardTimer {
+	border-radius: 20px;
+}
+
+.dashboardProfileTemp {
+	width: 557px;
+	display: flex;
+	flex-direction: column;
+}
+
+.dashboardProfile {
+	background-color: #5746ea;
+	padding: 30px;
+	display: flex;
+}
+.profileImg {
+	width: 169px;
+	height: 267px;
+	overflow: hidden;
+	background: url("./Images/profileImg.png");
+	background-size: 300%;
+	background-position: top;
+	border-radius: 40px;
+	border: 4px solid #fff;
+}
+.profileData {
+	margin-left: 40px;
+	height: 100%;
+}
+.profileData h2,
+.profileData p {
+	font-size: 21px;
+	font-weight: 400;
+	margin-top: 10px;
+}
+.profileData p {
+	font-size: 38px;
+	font-weight: bold;
+}
+.profileCategories {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+.profileCategory {
+	width: 135px;
+	height: 35px;
+	border-radius: 21px;
+	background-color: #9f94ff;
+	font-size: 16px;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+	margin: 5px;
+}
+
+.dashboardTemp {
+	background-color: #101744;
+	border-radius: 19px;
+	margin-top: 50px;
+	width: 100%;
+}
+.dashboardTempTime {
+	background-color: #ff4ade;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 20px;
+	padding: 8px 0;
+	border-radius: 19px 19px 0px 0px;
+}
+.dashboardTempDisplay {
+	background-color: #101744;
+	height: 100px;
+	border-radius: 0px 0px 19px 19px;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-around;
+	/* padding: 0 40px; */
+}
+.dashboardWeatherCondition,
+.dashboardTempDegree {
+	border-right: 1px solid white;
+}
+.dashboardWeatherCondition,
+.dashboardTempDegree,
+.dashboardTempCondition {
+	margin: 0 20px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.dashboardNotes {
+	background-color: #f1c75b;
+	margin: 0 40px;
+	padding: 40px;
+	color: #000;
+}
+.dashboardNotes h2 {
+	margin-bottom: 20px;
+}
+.dashboardNotes p.notes {
+	line-height: 30px;
+}
+.notes {
+	height: 380px;
+	overflow-y: auto;
+}
+.dashboardTimer {
+	background-color: #1e2343;
+	height: 300px;
+	border-radius: 40px;
+	padding: 40px;
+	margin: 40px 40px 0 0;
+}
+.dashboardProfileSection {
+	display: flex;
+}
+@media only screen and (width < 1200px) {
+	.entertainmentText,
+	.entertainmentCategory,
+	.registerFormSection {
 		width: 100vw;
 		margin-top: 30px;
 	}
-	.mainBody{
+	.mainBody {
 		overflow: scroll;
 		height: max-content;
+		overflow-x: hidden;
 	}
-	.registerPage, .entertainmentPage{
+	.registerPage,
+	.entertainmentPage {
 		flex-direction: column;
 	}
-	.registerImg{
+	.registerImg {
 		height: 20vh;
 		width: 100vw;
 	}
 	.entertainmentText h2 {
 		font-size: 3vh;
 		text-align: center;
+		margin-bottom: 3vh;
 	}
-	.entertainmentText p{
-		font-size: 4vh;
+	.entertainmentText p {
+		font-size: 3vh;
 		text-align: center;
 	}
-	.entertainmentTags{
+	.entertainmentTags {
 		align-items: center;
 		justify-content: center;
 		margin: 30px 0;
 	}
-	.category{
+	.category {
 		width: 200px;
 	}
-
+	.entertainmentCategory {
+		margin-bottom: 40px;
+	}
 }
-@media only screen and (width < 700px){
-	
-	.registerForm{
+@media only screen and (width < 700px) {
+	.registerForm {
 		padding: 0 20px;
 	}
-	.registerForm p{
+	.registerForm p {
 		width: 80%;
 	}
 	.registerForm input {
@@ -229,8 +408,8 @@ input.inputError {
 	}
 }
 
-@media only screen and (width < 515px){
-	.category{
+@media only screen and (width < 515px) {
+	.category {
 		width: 140px;
 		height: 140px;
 		margin: 20px;

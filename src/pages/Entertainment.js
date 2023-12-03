@@ -1,5 +1,6 @@
 import React from "react";
 import Category from "../components/Category";
+import { Link } from "react-router-dom";
 
 const Entertainment = () => {
 	return (
@@ -23,52 +24,11 @@ const Entertainment = () => {
 					</div>
 				</div>
 				<div className="entertainmentCategory">
-					<Category
-						color="#ff5208"
-						name="Action"
-						img="../Images/category/action.png"
-					/>
-					<Category
-						color="#d7a4ff"
-						name="Drama"
-						img="../Images/category/drama.png"
-					/>
-					<Category
-						color="#148a08"
-						name="Romance"
-						img="../Images/category/romance.png"
-					/>
-					<Category
-						color="#84c2ff"
-						name="Thriller"
-						img="../Images/category/thriller.png"
-					/>
-					<Category
-						color="#902500"
-						name="Western"
-						img="../Images/category/western.png"
-					/>
-					<Category
-						color="#7358ff"
-						name="Horror"
-						img="../Images/category/horror.png"
-					/>
-					<Category
-						color="#ff4ade"
-						name="Fantasy"
-						img="../Images/category/fantasy.png"
-					/>
-					<Category
-						color="#e61e32"
-						name="Music"
-						img="../Images/category/music.png"
-					/>
-					<Category
-						color="#6cd061"
-						name="Fiction"
-						img="../Images/category/fiction.png"
-					/>
+					<Category />
 				</div>
+				<Link to="/dashboard" className="entertainmentNext">
+					Next Page
+				</Link>
 			</div>
 		</div>
 	);

@@ -9,6 +9,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Entertainment from './pages/Entertainment';
+import Dashboard from './pages/Dashboard';
 
 
 const router = createBrowserRouter([
@@ -22,6 +23,12 @@ const router = createBrowserRouter([
     path: "/entertainment",
     element: (
       <Entertainment />
+    ),
+  },
+  {
+    path: "/dashboard",
+    element: (
+      <Dashboard />
     ),
   },
 ]);

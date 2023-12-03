@@ -1,25 +1,16 @@
 import { useState } from "react";
 import "./App.css";
-import { useNavigate } from 'react-router-dom';
-
-
+import { useNavigate } from "react-router-dom";
 
 function App() {
-
-  const navigate = useNavigate();
+	const navigate = useNavigate();
 
 	const [formData, setFormData] = useState({
-		name: "",
-		username: "",
-		email: "",
-		mobile: "",
+		superAppname: "",
+		superAppusername: "",
+		superAppemail: "",
+		superAppmobile: "",
 	});
-	// const [formError, setFormError] = useState({
-	// 	name: "",
-	// 	username: "",
-	// 	email: "",
-	// 	mobile: "",
-	// });
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -34,7 +25,7 @@ function App() {
 
 		localStorage.setItem("formData", JSON.stringify(formData));
 		console.log(localStorage.getItem("formData"));
-    navigate("/entertainment");
+		navigate("/entertainment");
 	};
 
 	return (
@@ -47,34 +38,34 @@ function App() {
 					<form className="registerForm" onSubmit={handleSubmit}>
 						<input
 							type="text"
-							name="name"
+							name="superAppname"
 							placeholder="Name"
-							id="name"
-							value={formData.name}
+							id="superAppname"
+							value={formData.superAppname}
 							onChange={handleChange}
 						/>
 						<input
 							type="text"
-							name="username"
-							id="username"
+							name="superAppusername"
+							id="superAppusername"
 							placeholder="Username"
-							value={formData.username}
+							value={formData.superAppusername}
 							onChange={handleChange}
 						/>
 						<input
 							type="email"
-							name="email"
+							name="superAppemail"
 							placeholder="Email"
-							id="email"
-							value={formData.email}
+							id="superAppemail"
+							value={formData.superAppemail}
 							onChange={handleChange}
 						/>
 						<input
 							type="text"
-							name="mobile"
-							id="mobile"
+							name="superAppmobile"
+							id="superAppmobile"
 							placeholder="Mobile"
-							value={formData.mobile}
+							value={formData.superAppmobile}
 							onChange={handleChange}
 						/>
 						<div className="checkRegister">
@@ -83,7 +74,7 @@ function App() {
 								Share my registration data with Superapp
 							</label>
 						</div>
-            {/* <span className="error">Field is required</span>   */}
+						{/* <span className="error">Field is required</span>   */}
 						<input type="submit" value="SIGN UP" />
 						<p>
 							By clicking on Sign up. you agree to Superapp{" "}
