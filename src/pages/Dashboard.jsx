@@ -21,7 +21,7 @@ const Dashboard = () => {
 				</div>
 				<NewsSection />
 			</div>
-			<Link to="" className="browseButton">Browse</Link>
+			<Link to="/movies" className="browseButton">Browse</Link>
 		</div>
 	);
 };

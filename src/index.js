@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Entertainment from './pages/Entertainment';
 import Dashboard from './pages/Dashboard';
+import Movies from './pages/Movies';
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,12 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: (
       <Dashboard />
+    ),
+  },
+  {
+    path: "/movies",
+    element: (
+      <Movies />
     ),
   },
 ]);

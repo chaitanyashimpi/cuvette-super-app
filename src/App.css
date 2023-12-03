@@ -234,6 +234,7 @@ input.inputError {
 	background-color: #fff;
 	border-radius: 40px;
 	overflow: hidden;
+	min-width: 450px;
 }
 
 .browseButton{
@@ -249,7 +250,7 @@ input.inputError {
 }
 
 .newsImg{
-	background: url('./Images/profileImg.png');
+	background: url('https://c.biztoc.com/p/7f3f13375939d26f/s.webp');
 	height: 500px;
 	display: flex;
 	width: 100%;
@@ -260,12 +261,12 @@ input.inputError {
 	background: rgba(0, 0, 0, 0.74);
 }
 .newsImg div h2{
-	font-size: 32px;
+	font-size: 22px;
 	font-weight: 500;
 	margin-bottom: 20px;
 }
 .newsImg div p{
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 600;
 }
 
@@ -403,6 +404,37 @@ input.inputError {
 .dashboardProfileSection {
 	display: flex;
 }
+
+/* Movies */
+.moviesSection{
+	padding: 40px;
+	color: #fff;
+}
+.movieHeader{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+.movieHeader h2{
+	font-size: 40px;
+	color: #72DB73;
+	font-family: Single Day;
+}
+.movieHeaderImg{
+	background: url('./Images/profileImg.png');
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-position: top;
+	background-size: cover;
+	border: 2px solid white;
+}
+.movies{
+	
+	margin: 30px 40px 0;
+}
+
 @media only screen and (width < 1200px) {
 	.entertainmentText,
 	.entertainmentCategory,

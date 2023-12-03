@@ -1,25 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const NewsSection = () => {
+	const [randomNews, setRandomNews] = useState({});
+	const apiKey = "63ecda4becfe415f8e268dd8c37847b5";
+
+	useEffect(() => {
+		const fetchNews = async () => {
+			try {
+				const response = await fetch(
+					`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}`
+				);
+
+				if (!response.ok) {
+					throw new Error("Network response was not ok");
+				}
+
+				const data = await response.json();
+				const randomIndex = Math.floor(Math.random() * data.articles.length);
+				const randomArticle = data.articles[randomIndex];
+				setRandomNews(randomArticle);
+			} catch (error) {
+				console.error("Error fetching news data:", error);
+			}
+		};
+
+		fetchNews();
+	}, []);
+
 	return (
 		<div className="dashboardRight">
 			{/* 63ecda4becfe415f8e268dd8c37847b5 */}
-			<div className="newsImg">
+			<div className="newsImg" style={{background: `url(${randomNews.urlToImage})`, backgroundPosition: 'center', backgroundSize: 'cover'}}>
 				<div>
-					<h2>Want to climb Mount Everest?</h2>
+					<h2>{randomNews.title}</h2>
 					<p>2-20-2023 | 07.35 PM</p>
 				</div>
 			</div>
-			<div className="newsArticle">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est placeat
-				architecto similique earum sequi recusandae impedit eaque, culpa dicta
-				vitae corrupti laudantium quidem quam adipisci ea et velit veniam
-				tempore! Molestiae quo consectetur sapiente voluptatibus expedita cum
-				est, natus molestias totam ad! Labore eum facilis ex saepe distinctio
-				quos necessitatibus, magnam totam temporibus soluta voluptate ipsum
-				exercitationem perspiciatis molestiae repellat.
-			</div>
-			
+			<div className="newsArticle">{randomNews.content}</div>
 		</div>
 	);
 };
