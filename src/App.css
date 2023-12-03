@@ -27,7 +27,7 @@
 	box-sizing: border-box;
 }
 
-a{
+a {
 	text-decoration: none;
 }
 .mainBody {
@@ -237,7 +237,7 @@ input.inputError {
 	min-width: 450px;
 }
 
-.browseButton{
+.browseButton {
 	background-color: #148a08;
 	padding: 10px 35px;
 	font-size: 18px;
@@ -249,28 +249,28 @@ input.inputError {
 	color: #fff;
 }
 
-.newsImg{
-	background: url('https://c.biztoc.com/p/7f3f13375939d26f/s.webp');
+.newsImg {
+	background: url("https://c.biztoc.com/p/7f3f13375939d26f/s.webp");
 	height: 500px;
 	display: flex;
 	width: 100%;
 	align-items: flex-end;
 }
-.newsImg div{
+.newsImg div {
 	padding: 30px;
 	background: rgba(0, 0, 0, 0.74);
 }
-.newsImg div h2{
+.newsImg div h2 {
 	font-size: 22px;
 	font-weight: 500;
 	margin-bottom: 20px;
 }
-.newsImg div p{
+.newsImg div p {
 	font-size: 16px;
 	font-weight: 600;
 }
 
-.newsArticle{
+.newsArticle {
 	color: #000;
 	text-align: justify;
 	padding: 20px;
@@ -406,23 +406,23 @@ input.inputError {
 }
 
 /* Movies */
-.moviesSection{
+.moviesSection {
 	padding: 40px;
 	color: #fff;
 }
-.movieHeader{
+.movieHeader {
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
 }
-.movieHeader h2{
+.movieHeader h2 {
 	font-size: 40px;
-	color: #72DB73;
+	color: #72db73;
 	font-family: Single Day;
 }
-.movieHeaderImg{
-	background: url('./Images/profileImg.png');
+.movieHeaderImg {
+	background: url("./Images/profileImg.png");
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
@@ -430,10 +430,27 @@ input.inputError {
 	background-size: cover;
 	border: 2px solid white;
 }
-.movies{
-	
+.movies {
 	margin: 30px 40px 0;
 }
+
+.movie h2{
+	margin: 30px 0;
+}
+
+.movie h2 {
+	color: #878787;
+	font-size: 25px;
+	font-weight: 600;
+}
+.movieImgs {
+	display: flex;
+	/* overflow-y: scroll; */
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
 
 @media only screen and (width < 1200px) {
 	.entertainmentText,
